@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ExCap SCPSC</string>
+
+
+    <string name="nav_drawer_open">Open Navigation Drawer</string>
+    <string name="nav_drawer_close">Close Navigation Drawer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="notice_txt">This is notice here || This is notice here || This is notice here</string>
+
+
+</resources>

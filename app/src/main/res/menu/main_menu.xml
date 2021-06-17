@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/profile_icon"
+            android:title="EX-Cap" />
+
+
+        <item
+            android:id="@+id/nav_committee"
+            android:icon="@drawable/committee_icon"
+            android:title="Committee" />
+
+
+        <item
+            android:id="@+id/nav_advisor"
+            android:icon="@drawable/advisor_icon"
+            android:title="Advisor" />
+
+
+        <item
+            android:id="@+id/nav_staff"
+            android:icon="@drawable/staff_icon"
+            android:title="Executive Staff"
+
+            />
+
+
+        <item
+            android:id="@+id/nav_registered"
+            android:icon="@drawable/reg2_icon"
+            android:title="Total Registered" />
+
+
+
+
+        <item
+            android:id="@+id/nav_notice"
+            android:icon="@drawable/notice_icon"
+            android:title="Notice" />
+
+
+
+
+
+
+
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/profile_icon"
+            android:title="Profile" />
+
+
+
+
+
+
+
+        <item
+            android:id="@+id/nav_payment"
+            android:icon="@drawable/payment_icon"
+            android:title="Payment" />
+
+
+        <item
+            android:id="@+id/nav_register"
+            android:icon="@drawable/reg_icon"
+            android:title="Registration" />
+
+
+        <item
+            android:id="@+id/nav_chat"
+            android:icon="@drawable/chat_icon"
+            android:title="General Chat" />
+
+
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/about_icon"
+            android:title="About App" />
+
+
+        <item
+            android:id="@+id/nav_signin"
+            android:icon="@drawable/sign_in"
+            android:title="Sign in" />
+
+
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/sign_out"
+            android:title="Sign out" />
+
+
+        <item
+            android:id="@+id/nav_share"
+            android:icon="@drawable/share_icon"
+            android:title="Share App" />
+
+
+    </group>
+
+
+</menu>
