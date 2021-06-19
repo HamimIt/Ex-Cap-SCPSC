@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "970092796425",
+    "project_id": "ex-cap-scpsc",
+    "storage_bucket": "ex-cap-scpsc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:970092796425:android:e9396962e22e87ef97b6d8",
+        "android_client_info": {
+          "package_name": "tech.hamimitbd.excapscpsc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "970092796425-dmgq5trilhlcsbs9oloodk3ia9rhuuk4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAU3eSQKMyOxIeaNXFBme28add-Jwv2bmE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "970092796425-dmgq5trilhlcsbs9oloodk3ia9rhuuk4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

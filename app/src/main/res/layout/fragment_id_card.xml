@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.ID_Card">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_idcard"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:title="ID Card"
+            app:titleTextColor="@color/purple_700" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar_idcard">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:background="#3FBF96">
+
+
+                <ImageView
+                    android:id="@+id/logo_icon"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/excap_icon" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="12dp"
+                    android:text="Ex-Cap SCPCS"
+                    android:textSize="18sp" />
+
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/excap_icon" />
+
+
+                <TextView
+                    android:id="@+id/reUnion_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/logo_icon"
+                    android:gravity="center"
+                    android:text="Re Union/ID Card"
+                    android:textColor="@color/white"
+                    android:textSize="22sp" />
+
+
+                <LinearLayout
+                    android:id="@+id/name_layout_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/reUnion_id"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="7">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:gravity="start"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Name :"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:gravity="start"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Md Mahfuzur rahman"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+
+
+
+
+                <LinearLayout
+
+                    android:id="@+id/season_layout_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/name_layout_id"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="7">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:gravity="start"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Season :"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:gravity="start"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="2016"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+
+
+
+
+                <LinearLayout
+
+                    android:id="@+id/passing_layout_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/season_layout_id"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="7">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:gravity="start"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Passing Class :"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:gravity="start"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="HSC"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+
+                    android:id="@+id/li_layout_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/passing_layout_id"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="7">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:gravity="start"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Last Institute :"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:gravity="start"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Bandladesh Univerity"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+
+                    android:id="@+id/jp_layout_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/li_layout_id"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="7">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:gravity="start"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Job Place :"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:gravity="start"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Savar"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+
+
+
+                <LinearLayout
+
+                    android:id="@+id/mn_layout_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/jp_layout_id"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="7">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:gravity="start"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Mobile :"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:gravity="start"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="01798146626"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="cursive"
+                android:text="Id Card"
+                android:textSize="50sp" />
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</FrameLayout>

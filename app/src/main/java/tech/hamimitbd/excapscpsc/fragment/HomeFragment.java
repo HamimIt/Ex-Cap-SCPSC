@@ -117,6 +117,15 @@ public class HomeFragment extends Fragment implements NavigationView.OnNavigatio
                 break;
 
 
+
+            case R.id.nav_id_card:
+                ((AppCompatActivity) requireActivity()).getSupportFragmentManager().beginTransaction().replace(R.id.main_activity_id, new ID_Card()).addToBackStack("stack").commit();
+                drawerLayout.closeDrawer(GravityCompat.START);
+                break;
+
+
+
+
             case R.id.nav_payment:
                 ((AppCompatActivity) requireActivity()).getSupportFragmentManager().beginTransaction().replace(R.id.main_activity_id, new Payment()).addToBackStack("stack").commit();
                 drawerLayout.closeDrawer(GravityCompat.START);

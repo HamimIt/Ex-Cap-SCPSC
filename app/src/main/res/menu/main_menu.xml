@@ -36,17 +36,10 @@
             android:title="Total Registered" />
 
 
-
-
         <item
             android:id="@+id/nav_notice"
             android:icon="@drawable/notice_icon"
             android:title="Notice" />
-
-
-
-
-
 
 
         <item
@@ -55,9 +48,10 @@
             android:title="Profile" />
 
 
-
-
-
+        <item
+            android:id="@+id/nav_id_card"
+            android:icon="@drawable/id_card_icon"
+            android:title="ID Card" />
 
 
         <item
