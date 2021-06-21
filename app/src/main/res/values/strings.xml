@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">ExCap SCPSC</string>
+    <string name="not_match">Password didn\'t match </string>
 
 
     <string name="nav_drawer_open">Open Navigation Drawer</string>

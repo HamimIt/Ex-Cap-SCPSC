@@ -50,20 +50,21 @@ public class HomeFragment extends Fragment implements NavigationView.OnNavigatio
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
+
+        // navigation menu
         drawerLayout = view.findViewById(R.id.drawer_layout_id);
         navigationView = view.findViewById(R.id.nav_view_id);
         toolbar = view.findViewById(R.id.toolbar_id);
-
 
         ((AppCompatActivity) requireActivity()).setSupportActionBar(toolbar);
         actionBarDrawerToggle = new ActionBarDrawerToggle(((AppCompatActivity) requireActivity()), drawerLayout, toolbar, R.string.nav_drawer_open, R.string.nav_drawer_close);
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
-
-
         ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         ((AppCompatActivity) getActivity()).getSupportActionBar().setHomeButtonEnabled(true);
         ((AppCompatActivity) getActivity()).getSupportActionBar().setHomeAsUpIndicator(R.drawable.menu_icon);
+
+        // navigation menu
 
 
         // slide images
@@ -77,8 +78,7 @@ public class HomeFragment extends Fragment implements NavigationView.OnNavigatio
         //slider images
 
 
-        // notice bar
-
+        // News slider
         TextView noticetxt = view.findViewById(R.id.notice_txt_id);
         noticetxt.setMarqueeRepeatLimit(-1);
         noticetxt.setHorizontallyScrolling(true);
@@ -86,7 +86,10 @@ public class HomeFragment extends Fragment implements NavigationView.OnNavigatio
         noticetxt.setEllipsize(TextUtils.TruncateAt.MARQUEE);
         noticetxt.setSelected(true);
 
+        // news slider
 
+
+        // navigation menu
         navigationView.setNavigationItemSelectedListener(this);
 
 
@@ -117,13 +120,10 @@ public class HomeFragment extends Fragment implements NavigationView.OnNavigatio
                 break;
 
 
-
             case R.id.nav_id_card:
                 ((AppCompatActivity) requireActivity()).getSupportFragmentManager().beginTransaction().replace(R.id.main_activity_id, new ID_Card()).addToBackStack("stack").commit();
                 drawerLayout.closeDrawer(GravityCompat.START);
                 break;
-
-
 
 
             case R.id.nav_payment:

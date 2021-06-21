@@ -19,7 +19,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         HomeFragment homeFragment = new HomeFragment();
         FragmentManager manager = getSupportFragmentManager();
         manager.beginTransaction().add(R.id.main_activity_id, homeFragment).addToBackStack("stack").commit();
@@ -34,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    void backDialog(){
+    void backDialog() {
 
         new AlertDialog.Builder(this)
                 .setMessage("Are you sure you want to exit?")
@@ -50,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         /*super.onBackPressed();*/
 
     }
+
     // on back press
     public void onBackPressed() {
         int count = getSupportFragmentManager().getBackStackEntryCount();
@@ -62,11 +62,10 @@ public class MainActivity extends AppCompatActivity {
             getSupportFragmentManager().popBackStack();
         }
 
-        Log.d("click","ok");
+        Log.d("click", "ok");
 
 
     }
-
 
 
 }

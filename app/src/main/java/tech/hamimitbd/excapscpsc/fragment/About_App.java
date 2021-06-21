@@ -19,15 +19,14 @@ public class About_App extends Fragment {
 
 
     public About_App() {
-        // Required empty public constructor
     }
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_about__app, container, false);
+
         //adding custom toolbar
         Toolbar toolbar = view.findViewById(R.id.toolbar_about);
         ((AppCompatActivity) requireActivity()).setSupportActionBar(toolbar);
