@@ -1,5 +1,7 @@
 package tech.hamimitbd.excapscpsc.fragment;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -17,9 +19,16 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType;
 import com.smarteist.autoimageslider.SliderAnimations;
 import com.smarteist.autoimageslider.SliderView;
+
+import org.jetbrains.annotations.NotNull;
 
 import tech.hamimitbd.excapscpsc.R;
 import tech.hamimitbd.excapscpsc.SliderAdapter;
@@ -27,10 +36,17 @@ import tech.hamimitbd.excapscpsc.SliderAdapter;
 
 public class HomeFragment extends Fragment implements NavigationView.OnNavigationItemSelectedListener {
 
+    public static final String SHARED_PRE = "shared";
+    public static final String TEXT = "text";
     NavigationView navigationView;
     ActionBarDrawerToggle actionBarDrawerToggle;
     DrawerLayout drawerLayout;
     Toolbar toolbar;
+    TextView noticetxt;
+
+    // publish news
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference myRef;
 
     SliderView sliderView;
     int[] images = {R.drawable.one, R.drawable.two,
@@ -55,6 +71,8 @@ public class HomeFragment extends Fragment implements NavigationView.OnNavigatio
         drawerLayout = view.findViewById(R.id.drawer_layout_id);
         navigationView = view.findViewById(R.id.nav_view_id);
         toolbar = view.findViewById(R.id.toolbar_id);
+        noticetxt = view.findViewById(R.id.show_news_txt_id);
+
 
         ((AppCompatActivity) requireActivity()).setSupportActionBar(toolbar);
         actionBarDrawerToggle = new ActionBarDrawerToggle(((AppCompatActivity) requireActivity()), drawerLayout, toolbar, R.string.nav_drawer_open, R.string.nav_drawer_close);
@@ -65,6 +83,15 @@ public class HomeFragment extends Fragment implements NavigationView.OnNavigatio
         ((AppCompatActivity) getActivity()).getSupportActionBar().setHomeAsUpIndicator(R.drawable.menu_icon);
 
         // navigation menu
+
+
+        // News slider
+        noticetxt.setMarqueeRepeatLimit(-1);
+        noticetxt.setHorizontallyScrolling(true);
+        noticetxt.setSingleLine();
+        noticetxt.setEllipsize(TextUtils.TruncateAt.MARQUEE);
+        noticetxt.setSelected(true);
+        // news slider
 
 
         // slide images
@@ -78,22 +105,51 @@ public class HomeFragment extends Fragment implements NavigationView.OnNavigatio
         //slider images
 
 
-        // News slider
-        TextView noticetxt = view.findViewById(R.id.notice_txt_id);
-        noticetxt.setMarqueeRepeatLimit(-1);
-        noticetxt.setHorizontallyScrolling(true);
-        noticetxt.setSingleLine();
-        noticetxt.setEllipsize(TextUtils.TruncateAt.MARQUEE);
-        noticetxt.setSelected(true);
-
-        // news slider
-
-
         // navigation menu
         navigationView.setNavigationItemSelectedListener(this);
 
 
+        // publish news
+        database = FirebaseDatabase.getInstance();
+        myRef = database.getReference("News");
+
+
+        myRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
+
+                String news = snapshot.getValue(String.class);
+                noticetxt.setText(news);
+
+                SharedPreferences sharedPreferences = requireContext().getSharedPreferences(SHARED_PRE, Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putString(TEXT, noticetxt.getText().toString());
+                editor.apply();
+
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull @NotNull DatabaseError error) {
+
+
+            }
+        });
+
+
+        saveNews();
+
+
         return view;
+
+    }
+
+    private void saveNews() {
+
+        SharedPreferences sharedPreferences = requireContext().getSharedPreferences(SHARED_PRE, Context.MODE_PRIVATE);
+        String txt = sharedPreferences.getString(TEXT, "");
+        noticetxt.setText(txt);
+
 
     }
 
@@ -114,8 +170,26 @@ public class HomeFragment extends Fragment implements NavigationView.OnNavigatio
                 break;
 
 
+            case R.id.nav_wc:
+                ((AppCompatActivity) requireActivity()).getSupportFragmentManager().beginTransaction().replace(R.id.main_activity_id, new WebCategory()).addToBackStack("stack").commit();
+                drawerLayout.closeDrawer(GravityCompat.START);
+                break;
+
+
+            case R.id.nav_wu:
+                ((AppCompatActivity) requireActivity()).getSupportFragmentManager().beginTransaction().replace(R.id.main_activity_id, new WebUpload()).addToBackStack("stack").commit();
+                drawerLayout.closeDrawer(GravityCompat.START);
+                break;
+
+
             case R.id.nav_profile:
                 ((AppCompatActivity) requireActivity()).getSupportFragmentManager().beginTransaction().replace(R.id.main_activity_id, new Profile()).addToBackStack("stack").commit();
+                drawerLayout.closeDrawer(GravityCompat.START);
+                break;
+
+
+            case R.id.nav_admin:
+                ((AppCompatActivity) requireActivity()).getSupportFragmentManager().beginTransaction().replace(R.id.main_activity_id, new AdminPermission()).addToBackStack("stack").commit();
                 drawerLayout.closeDrawer(GravityCompat.START);
                 break;
 
@@ -136,6 +210,13 @@ public class HomeFragment extends Fragment implements NavigationView.OnNavigatio
                 ((AppCompatActivity) requireActivity()).getSupportFragmentManager().beginTransaction().replace(R.id.main_activity_id, new Committee()).addToBackStack("stack").commit();
                 drawerLayout.closeDrawer(GravityCompat.START);
                 break;
+
+
+            case R.id.nav_regEdit:
+                ((AppCompatActivity) requireActivity()).getSupportFragmentManager().beginTransaction().replace(R.id.main_activity_id, new RegistrationEdit()).addToBackStack("stack").commit();
+                drawerLayout.closeDrawer(GravityCompat.START);
+                break;
+
 
             case R.id.nav_advisor:
                 ((AppCompatActivity) requireActivity()).getSupportFragmentManager().beginTransaction().replace(R.id.main_activity_id, new Advisor()).addToBackStack("stack").commit();

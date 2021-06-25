@@ -31,6 +31,7 @@ public class Committee extends Fragment {
        View view =inflater.inflate(R.layout.fragment_committee, container, false);
 
         //adding custom toolbar
+        setHasOptionsMenu(true);
         Toolbar toolbar = view.findViewById(R.id.toolbar_committee);
         ((AppCompatActivity) requireActivity()).setSupportActionBar(toolbar);
         Objects.requireNonNull(((AppCompatActivity) requireActivity()).getSupportActionBar()).setDisplayHomeAsUpEnabled(true);

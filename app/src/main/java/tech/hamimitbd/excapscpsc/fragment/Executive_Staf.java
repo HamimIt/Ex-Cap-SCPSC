@@ -28,6 +28,7 @@ public class Executive_Staf extends Fragment {
         View view= inflater.inflate(R.layout.fragment_executive_staf, container, false);
 
         //adding custom toolbar
+        setHasOptionsMenu(true);
         Toolbar toolbar = view.findViewById(R.id.toolbar_staff);
         ((AppCompatActivity) requireActivity()).setSupportActionBar(toolbar);
         Objects.requireNonNull(((AppCompatActivity) requireActivity()).getSupportActionBar()).setDisplayHomeAsUpEnabled(true);

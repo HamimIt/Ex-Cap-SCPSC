@@ -11,7 +11,6 @@
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         tools:ignore="ScopedStorage" />
 
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/excap_logo"
@@ -19,21 +18,22 @@
         android:roundIcon="@mipmap/excap_logo_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ExCapSCPSC">
-        <activity android:name=".MainActivity"
-            android:screenOrientation="portrait">
-
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"
-                    android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+                <action
+                    android:name="android.intent.action.MAIN"
+                    android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-
         </activity>
 
-        <activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
-            android:theme="@style/Base.Theme.AppCompat"/>
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
 
         <meta-data
             android:name="preloaded_fonts"

@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.WebCategory">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_wc"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:fontFamily="cursive"
+                android:gravity="center"
+                android:text="Web Category"
+                android:textColor="@color/purple_700"
+                android:textSize="25sp" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar_wc">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp">
+
+                    <TextView
+                        android:id="@+id/category_txt_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="Category : "
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+
+                    <EditText
+                        android:id="@+id/category_edit_txt_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_toEndOf="@+id/category_txt_id"
+                        android:background="@drawable/bg_style"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:singleLine="true" />
+
+
+                    <TextView
+                        android:id="@+id/nu_txt_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/category_edit_txt_id"
+                        android:layout_marginTop="18dp"
+                        android:text="Numeric : "
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+
+                    <EditText
+                        android:id="@+id/nu_edit_txt_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/category_edit_txt_id"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_toEndOf="@+id/nu_txt_id"
+                        android:background="@drawable/bg_style"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:singleLine="true" />
+
+
+                    <Button
+                        android:id="@+id/add_category_btn_id"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/nu_edit_txt_id"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/blue_style"
+                        android:gravity="center"
+                        android:text="Add Category"
+                        android:textAllCaps="false"
+                        android:textSize="18sp"
+                        app:backgroundTint="@null" />
+
+
+                    <EditText
+                        android:id="@+id/search_btn_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/add_category_btn_id"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/bg_style"
+                        android:drawableEnd="@drawable/search_icon"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:singleLine="true" />
+
+
+                    <TableLayout
+                        android:id="@+id/table_heading_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/search_btn_id"
+                        android:layout_marginTop="12dp"
+                        android:background="#ffffff"
+                        android:shrinkColumns="*"
+                        android:stretchColumns="*">
+
+                        <TableRow
+                            android:id="@+id/tableRow1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#69BCF3">
+
+                            <TextView
+                                android:id="@+id/TextView01"
+                                android:layout_margin="2dp"
+                                android:layout_weight="1"
+                                android:background="#dcdcdc"
+                                android:gravity="center"
+                                android:padding="20dip"
+                                android:text="SL"
+                                android:textColor="#000000"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/TextView02"
+                                android:layout_margin="2dp"
+                                android:layout_weight="1"
+                                android:background="#d3d3d3"
+                                android:gravity="center"
+                                android:padding="20dip"
+                                android:text="Name"
+                                android:textColor="#000000"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/TextView04"
+                                android:layout_margin="2dp"
+                                android:layout_weight="1"
+                                android:background="#cac9c9"
+                                android:gravity="center"
+                                android:padding="20dip"
+                                android:text="Numaric"
+                                android:textColor="#000000"
+                                android:textSize="12sp" />
+
+
+                            <TextView
+                                android:id="@+id/TextView05"
+                                android:layout_margin="2dp"
+                                android:layout_weight="1"
+                                android:background="#cac9c9"
+                                android:gravity="center"
+                                android:padding="20dip"
+                                android:text="Action"
+                                android:textColor="#000000"
+                                android:textSize="12sp" />
+
+                        </TableRow>
+
+                        <!-- Row 3 with 3 columns -->
+
+
+                        <!-- <TableRow
+                             android:background="#fff"
+                             android:id="@+id/tableRow2"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content">
+
+                             <TextView
+                                 android:layout_margin="2dp"
+                                 android:layout_weight="1"
+                                 android:background="#dcdcdc"
+                                 android:gravity="center"
+                                 android:padding="20dip"
+                                 android:text=""
+                                 android:textSize="12sp"
+                                 android:textColor="#000000" />
+
+                             <TextView
+                                 android:layout_margin="2dp"
+                                 android:layout_weight="1"
+                                 android:background="#d3d3d3"
+                                 android:gravity="center"
+                                 android:padding="20dip"
+                                 android:textSize="12sp"
+                                 android:text=""
+                                 android:textColor="#000000" />
+
+                             <TextView
+                                 android:layout_margin="2dp"
+                                 android:layout_weight="1"
+                                 android:background="#cac9c9"
+                                 android:gravity="center"
+                                 android:textSize="12sp"
+                                 android:padding="20dip"
+                                 android:textColor="#000000" />
+
+
+
+                             <TextView
+                                 android:layout_margin="2dp"
+                                 android:layout_weight="1"
+                                 android:background="#cac9c9"
+                                 android:gravity="center"
+                                 android:padding="20dip"
+                                 android:text="Update"
+                                 android:textSize="12sp"
+                                 android:textColor="#000000" />
+
+                         </TableRow>
+         -->
+
+
+                    </TableLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/table_item_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/table_heading_id" />
+
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+        </ScrollView>
+
+
+    </RelativeLayout>
+
+
+</FrameLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.RegistrationEdit">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_reg_edit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:title="Registration Edit"
+            android:background="#FFFFFF"
+            app:titleTextColor="@color/purple_700" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar_reg_edit">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/searchResult_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                />
+
+
+
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</FrameLayout>

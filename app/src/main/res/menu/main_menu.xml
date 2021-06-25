@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
     <group android:checkableBehavior="single">
 
 
@@ -20,6 +19,16 @@
             android:id="@+id/nav_advisor"
             android:icon="@drawable/advisor_icon"
             android:title="Advisor" />
+
+
+
+
+        <item
+            android:id="@+id/nav_regEdit"
+            android:icon="@drawable/advisor_icon"
+            android:title="Registration Edit" />
+
+
 
 
         <item
@@ -42,10 +51,37 @@
             android:title="Notice" />
 
 
+
+        <item
+            android:id="@+id/nav_wc"
+            android:icon="@drawable/profile_icon"
+            android:title="Web Category" />
+
+
+
+
+        <item
+            android:id="@+id/nav_wu"
+            android:icon="@drawable/profile_icon"
+            android:title="Web Upload" />
+
+
+
+
+
         <item
             android:id="@+id/nav_profile"
             android:icon="@drawable/profile_icon"
             android:title="Profile" />
+
+
+
+
+
+        <item
+            android:id="@+id/nav_admin"
+            android:icon="@drawable/profile_icon"
+            android:title="Admin" />
 
 
         <item

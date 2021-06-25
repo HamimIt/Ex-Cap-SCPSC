@@ -28,6 +28,7 @@ public class Total_Register extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_total__register, container, false);
         //adding custom toolbar
+        setHasOptionsMenu(true);
         Toolbar toolbar = view.findViewById(R.id.toolbar_total_reg);
         ((AppCompatActivity) requireActivity()).setSupportActionBar(toolbar);
         Objects.requireNonNull(((AppCompatActivity) requireActivity()).getSupportActionBar()).setDisplayHomeAsUpEnabled(true);

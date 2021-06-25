@@ -49,13 +49,14 @@
 
 
                         <ImageView
+                            android:background="@drawable/bg_style"
                             android:id="@+id/reg_img_id"
                             android:layout_width="120dp"
                             android:layout_height="120dp"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="8dp"
                             android:elevation="4dp"
-                            android:src="@drawable/excap_icon" />
+                            android:src="@drawable/reg_img_src" />
 
 
                         <com.google.android.material.textfield.TextInputLayout
@@ -155,6 +156,7 @@
 
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/text_input_dob_id"
+                                android:inputType="date"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableStart="@drawable/custom_dob_icon"
@@ -584,6 +586,15 @@
                                         app:boxCornerRadiusBottomStart="25dp"
                                         app:boxCornerRadiusTopEnd="25dp"
                                         app:boxCornerRadiusTopStart="25dp">
+
+                                        <!--<AutoCompleteTextView
+                                            android:id="@+id/auto_com1"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            />-->
+
+
+
 
                                         <com.google.android.material.textfield.TextInputEditText
                                             android:id="@+id/text_input_dis_id"

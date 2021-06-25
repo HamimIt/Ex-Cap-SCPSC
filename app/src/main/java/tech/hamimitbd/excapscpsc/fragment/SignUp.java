@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -19,12 +20,11 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import org.jetbrains.annotations.NotNull;
-
-import java.util.Objects;
 
 import tech.hamimitbd.excapscpsc.R;
 import tech.hamimitbd.excapscpsc.User_SignUp;
@@ -94,15 +94,12 @@ public class SignUp extends Fragment {
         });
 
 
-
         // kheye aschi ami tumi dekho okok
-
         /* AwesomeValidation.addValidation(this.,R.id.text_input_re_pass_id, String.valueOf(Pattern.compile(String.valueOf(Pattern.compile("[a-zA-Z\\s]+")))), R.string.not_match);
         AwesomeValidation.addValidation(getActivity(), R.id.edt_tel, RegexTemplate.TELEPHONE, R.string.err_tel);
         AwesomeValidation.addValidation(getActivity(), R.id.edt_email, android.util.Patterns.EMAIL_ADDRESS, R.string.err_email);
         AwesomeValidation.addValidation(getActivity(), R.id.edt_year, Range.closed(1900, Calendar.getInstance().get(Calendar.YEAR)), R.string.err_year);
         AwesomeValidation.addValidation(getActivity(), R.id.edt_height, Range.closed(0.0f, 2.72f), R.string.err_height);
-
          */
 
 
@@ -176,13 +173,18 @@ public class SignUp extends Fragment {
                         if (task.isSuccessful()) {
 
                             User_SignUp user_signUp = new User_SignUp(inputName, inputMobile, inputEmail, inputPass);
-                            Log.d("values", ""+FirebaseAuth.getInstance().getCurrentUser().getUid());
-                            Log.d("values", user_signUp.getName()+" "+user_signUp.getEmail()+" "+user_signUp.getMobile()+" "+user_signUp.getPass());
+                            Log.d("values", "" + FirebaseAuth.getInstance().getCurrentUser().getUid());
+                            Log.d("values", user_signUp.getName() + " " + user_signUp.getEmail() + " " + user_signUp.getMobile() + " " + user_signUp.getPass());
                             myRef.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(user_signUp).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
                                 public void onComplete(@NonNull @NotNull Task<Void> task) {
 
                                     if (task.isSuccessful()) {
+
+
+                                        ((AppCompatActivity) requireActivity()).getSupportFragmentManager().beginTransaction().
+                                                replace(R.id.main_activity_id, new SignIn()).addToBackStack("stack").commit();
+
 
                                         Toast.makeText(getContext(), "Sign up Successfully", Toast.LENGTH_SHORT).show();
                                     } else {
@@ -193,9 +195,6 @@ public class SignUp extends Fragment {
 
                                 }
                             });
-
-
-                            
 
 
                         } else {

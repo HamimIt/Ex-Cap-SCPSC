@@ -2,12 +2,28 @@
     <string name="app_name">ExCap SCPSC</string>
     <string name="not_match">Password didn\'t match </string>
 
+    <string-array name="membership">
+        <item>General Member</item>
+        <item>Advisor</item>
+        <item>Admin</item>
+        <item>Committee Member</item>
+        <item>Executive Staff</item>
+
+    </string-array>
+
+    <string-array name="webUpload">
+        <item>Notice</item>
+        <item>News</item>
+        <item>বাণী</item>
+    </string-array>
+
 
     <string name="nav_drawer_open">Open Navigation Drawer</string>
     <string name="nav_drawer_close">Close Navigation Drawer</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="notice_txt">This is notice here || This is notice here || This is notice here</string>
+    <string name="news_txt">Experimental activities are underway    ||     Let us know if you have Suggestion    ||
+    Thank You EX-CAP SCPSC </string>
 
 
 </resources>
