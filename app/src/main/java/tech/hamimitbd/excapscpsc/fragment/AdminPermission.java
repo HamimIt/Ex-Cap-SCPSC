@@ -31,9 +31,7 @@ public class AdminPermission extends Fragment {
     private String news1 ;
 
 
-    public AdminPermission() {
-
-    }
+    public AdminPermission() { }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -63,6 +61,7 @@ public class AdminPermission extends Fragment {
 
             @Override
             public void onClick(View v) {
+
                 news1 = news.getText().toString();
                 showNews.setText(news1);
 

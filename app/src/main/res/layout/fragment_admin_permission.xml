@@ -217,7 +217,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="20sp"
                         android:gravity="start"
-                        android:hint="White news here"
                         android:scrollHorizontally="true"
                         android:singleLine="true"
                         android:background="#48BC53"

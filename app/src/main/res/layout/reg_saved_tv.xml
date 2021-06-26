@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/saved_name_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="Sohag"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/saved_fn_txt_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="Sadiqul Islam"
+        android:textSize="22sp" />
+
+
+    <TextView
+        android:id="@+id/saved_mn_txt_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="Taslima Begum"
+        android:textSize="22sp" />
+    <TextView
+        android:id="@+id/saved_dob_txt_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="16/11/1998"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/saved_mob_txt_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="101798146626"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/saved_py_txt_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="2020"
+        android:textSize="22sp" />
+
+
+
+
+    <TextView
+        android:id="@+id/saved_pc_txt_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="hsc"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/saved_ina_txt_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="savar can public"
+        android:textSize="22sp" />
+
+
+    <TextView
+        android:id="@+id/saved_group_txt_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="science"
+        android:textSize="22sp" />
+
+
+
+    <TextView
+        android:id="@+id/saved_religion_txt_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="Islam"
+        android:textSize="22sp" />
+
+
+    <TextView
+        android:id="@+id/saved_li_txt_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="BU"
+        android:textSize="22sp" />
+
+
+    <TextView
+        android:id="@+id/saved_pp_txt_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="Android"
+        android:textSize="22sp" />
+
+
+
+    <TextView
+        android:id="@+id/saved_wp_txt_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="Savar"
+        android:textSize="22sp" />
+
+
+
+    <TextView
+        android:id="@+id/saved_bg_txt_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="A+"
+        android:textSize="22sp" />
+
+
+
+    <TextView
+        android:id="@+id/saved_gender_txt_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="Male"
+        android:textSize="22sp" />
+
+
+    <TextView
+        android:id="@+id/saved_pre_dis_txt_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="savar"
+        android:textSize="22sp" />
+
+
+
+    <TextView
+        android:id="@+id/saved_pre_thana_txt_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="savar"
+        android:textSize="22sp" />
+
+
+
+
+    <TextView
+        android:id="@+id/saved_pre_vill_txt_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="savar"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/saved_pre_po_txt_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="6340"
+        android:textSize="22sp" />
+
+
+
+
+    <TextView
+        android:id="@+id/saved_per_dis_txt_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="savar"
+        android:textSize="22sp" />
+
+
+
+
+
+
+    <TextView
+        android:id="@+id/saved_per_thana_txt_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="savar"
+        android:textSize="22sp" />
+
+
+    <TextView
+        android:id="@+id/saved_per_vill_txt_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="savar"
+        android:textSize="22sp" />
+
+
+
+    <TextView
+        android:id="@+id/saved_per_po_txt_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="6340"
+        android:textSize="22sp" />
+
+
+
+
+    <TextView
+        android:id="@+id/saved_mem_type_txt_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="general "
+        android:textSize="22sp" />
+
+
+
+
+
+</LinearLayout>
+
+
+
