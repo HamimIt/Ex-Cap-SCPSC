@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">ExCap SCPSC</string>
     <string name="not_match">Password didn\'t match </string>
+    <string name="sample_admob_app_id">ca-app-pub-1716189511430378~4948501395</string>
+    <string name="sample_admob_ad_id">ca-app-pub-3940256099942544/6300978111</string>
+
+
 
     <string-array name="membership">
         <item>General Member</item>

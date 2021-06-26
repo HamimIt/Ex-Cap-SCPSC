@@ -10,6 +10,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
+import com.google.android.gms.ads.AdSize;
+import com.google.android.gms.ads.AdView;
+
 import java.util.Objects;
 
 import tech.hamimitbd.excapscpsc.R;
@@ -33,6 +36,10 @@ public class Advisor extends Fragment {
         Objects.requireNonNull(((AppCompatActivity) requireActivity()).getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
 
+
+        AdView adView = new AdView(getContext());
+        adView.setAdSize(AdSize.BANNER);
+        adView.setAdUnitId("ca-app-pub-3940256099942544/6300978111");
 
 
 

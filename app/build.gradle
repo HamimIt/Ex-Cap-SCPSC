@@ -61,9 +61,10 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics'
     implementation 'com.google.android.gms:play-services-auth:19.0.0'
     implementation 'com.google.firebase:firebase-appcheck-debug:16.0.0-beta01'
-
    // confirm pass validation
     implementation 'com.basgeekball:awesome-validation:4.3'
+    // ad
+    implementation 'com.google.android.gms:play-services-ads:20.2.0'
 
 
 

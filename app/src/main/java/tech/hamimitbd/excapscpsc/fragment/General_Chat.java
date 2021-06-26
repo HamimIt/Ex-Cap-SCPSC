@@ -30,6 +30,12 @@ public class General_Chat extends Fragment {
                              Bundle savedInstanceState) {
 
         View view= inflater.inflate(R.layout.fragment_general__chat, container, false);
+        //adding custom toolbar
+        setHasOptionsMenu(true);
+        Toolbar toolbar = view.findViewById(R.id.toolbar_chat);
+        ((AppCompatActivity) requireActivity()).setSupportActionBar(toolbar);
+        Objects.requireNonNull(((AppCompatActivity) requireActivity()).getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+
 
 
 
@@ -40,6 +46,16 @@ public class General_Chat extends Fragment {
 
 
 
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            requireActivity().getSupportFragmentManager().beginTransaction().replace(R.id.main_activity_id, new HomeFragment()).commit();
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
 
 
 

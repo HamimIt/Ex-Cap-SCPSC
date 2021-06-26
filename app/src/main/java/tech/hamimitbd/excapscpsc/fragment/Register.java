@@ -20,6 +20,8 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.google.android.gms.ads.AdSize;
+import com.google.android.gms.ads.AdView;
 import com.theartofdev.edmodo.cropper.CropImage;
 import com.theartofdev.edmodo.cropper.CropImageView;
 
@@ -93,6 +95,13 @@ public class Register extends Fragment {
         Toolbar toolbar = view.findViewById(R.id.toolbar_register);
         ((AppCompatActivity) requireActivity()).setSupportActionBar(toolbar);
         Objects.requireNonNull(((AppCompatActivity) requireActivity()).getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+
+
+
+        AdView adView = new AdView(getContext());
+        adView.setAdSize(AdSize.BANNER);
+        adView.setAdUnitId("ca-app-pub-3940256099942544/6300978111");
+
 
 
         /// find edit text
